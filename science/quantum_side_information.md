@@ -13,7 +13,7 @@ Write
 ```math
 g=P_{\mathrm{guess}}(\Theta|E)
 =\max_{\{M_\theta\}}
-\sum_\theta p_\theta\operatorname{Tr}(M_\theta\rho_E^\theta).
+\sum_\theta p_\theta\mathrm{Tr}(M_\theta\rho_E^\theta).
 ```
 
 Their proved bound is $`g(1+|C|2^{-d(C)/2})`$. Remark 3 establishes an improvement for **classical** $`E`$ and asks whether the same expression also holds for quantum $`E`$:
@@ -53,7 +53,7 @@ For one qubit define
 Y=\frac14(\rho_0+\rho_1+|\rho_0-\rho_1|).
 ```
 
-The operator inequalities $`|A|\ge A`$ and $`|A|\ge-A`$ for Hermitian $`A`$ show that $`Y\ge\rho_0/2`$ and $`Y\ge\rho_1/2`$. Also $`\operatorname{Tr}Y=(2+\sqrt2)/4=\beta`$.
+The operator inequalities $`|A|\ge A`$ and $`|A|\ge-A`$ for Hermitian $`A`$ show that $`Y\ge\rho_0/2`$ and $`Y\ge\rho_1/2`$. Also $`\mathrm{Tr}\,Y=(2+\sqrt2)/4=\beta`$.
 
 Tensor products preserve these positive-operator inequalities, so for every $`\theta`$,
 
@@ -65,8 +65,8 @@ For any discrimination POVM,
 
 ```math
 2^{-n}\sum_\theta
-\operatorname{Tr}(M_\theta|0^\theta\rangle\langle0^\theta|)
-\le\sum_\theta\operatorname{Tr}(M_\theta Y^{\otimes n})
+\mathrm{Tr}(M_\theta|0^\theta\rangle\langle0^\theta|)
+\le\sum_\theta\mathrm{Tr}(M_\theta Y^{\otimes n})
 =\beta^n.
 ```
 

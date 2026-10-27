@@ -106,6 +106,10 @@ The [retained-set bound here](../science/noise_and_loss.md) is a monogamy statem
 
 The measurement-and-broadcast realization also belongs to the setting of state discrimination with information revealed after measurement. **D. Gopal and S. Wehner**, [“Using post-measurement information in state discrimination”](https://arxiv.org/abs/1003.0716), develop this general framework and SDP optimality conditions. The present analysis proves the specific BB84 value and exhibits a normalized covariant POVM attaining it.
 
+## Educational foundation
+
+**John Watrous.** *The Theory of Quantum Information*. Cambridge University Press, 2018. The [author's page](https://cs.uwaterloo.ca/~watrous/TQI/) provides a prepublication manuscript and errata. This is the project's single educational anchor for finite-dimensional operators, states, channels, measurements and state discrimination. The [source bridge](../learning/watrous_bridge.md) maps the relevant sections to the proofs here; the research citations above supply the separate monogamy and cryptographic ingredients.
+
 ## Mathematical ingredients and scope
 
 The Gram/frame eigenvalue correspondence, operator-norm comparison, MacWilliams transform, random-subspace inclusion probabilities, Markov's inequality and subset-moment Chernoff argument are standard ingredients. They are proved or instantiated explicitly where used. The sharp spectral and coding statements should be distinguished from these tools.

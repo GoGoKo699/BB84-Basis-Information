@@ -37,7 +37,7 @@ For each question define the winning projector
 The summands are orthogonal projections. A fixed strategy succeeds with probability
 
 ```math
-\operatorname{Tr}\!\left[\rho_{ABD}
+\mathrm{Tr}\!\left[\rho_{ABD}
 \sum_\theta\mu(\theta)\Pi_\theta\right].
 ```
 
@@ -108,12 +108,12 @@ This bounds every state and every local strategy.
 Choose outcomes $`a_0,b_0`$ attaining $`\|P_{a_0}Q_{b_0}\|=c`$. There are unit vectors
 
 ```math
-u\in\operatorname{ran}P_{a_0},\qquad
-v\in\operatorname{ran}Q_{b_0},\qquad
+u\in\mathrm{ran}\,P_{a_0},\qquad
+v\in\mathrm{ran}\,Q_{b_0},\qquad
 \langle u,v\rangle=c.
 ```
 
-For example, take a unit top eigenvector $`v`$ of $`Q_{b_0}P_{a_0}Q_{b_0}`$ in $`\operatorname{ran}Q_{b_0}`$, with eigenvalue $`c^2`$, and put $`u=P_{a_0}v/c`$. This also handles $`c=1`$.
+For example, take a unit top eigenvector $`v`$ of $`Q_{b_0}P_{a_0}Q_{b_0}`$ in $`\mathrm{ran}\,Q_{b_0}`$, with eigenvalue $`c^2`$, and put $`u=P_{a_0}v/c`$. This also handles $`c=1`$.
 
 Let $`w_0=u,w_1=v`$ and $`w_\theta=\bigotimes_iw_{\theta_i}`$. Both players answer $`a_0`$ in every zero-question coordinate and $`b_0`$ in every one-question coordinate. The success projection $`F_{f(\theta)}^\theta`$ contains $`w_\theta`$, so
 

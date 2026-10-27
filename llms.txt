@@ -22,6 +22,15 @@
 - [Key recycling](science/key_recycling.md): inherited Fehr–Salvail assumptions, exact-value substitution, one-step and sequential bounds, limited quantitative comparison.
 - [Resource interpretation](science/interpretation.md): secret seed versus total key, public setup, quantum operations and scope.
 
+## Study routes
+
+- [Learning guide](learning/README.md): entry points for the scientific story, operator foundations, security models and finite examples.
+- [Milestone map](learning/milestones.md): the shared 30 understanding targets, ordered as 13 background/preliminaries and 17 narrative/innovation milestones, with dependencies and canonical source pointers.
+- [Watrous source bridge](learning/watrous_bridge.md): the single educational anchor, verified sections, notation translation and project-specific steps beyond the textbook.
+- [Worked tutorial](learning/tutorial.md): single-qubit intuition, a complete two-qubit code example, and the route to exact security, optimal basis randomness, noise/loss and scoped applications.
+
+For a first reading, use the tutorial alongside the milestone map. For an operator-theoretic question, use the source bridge and the relevant exact proof. For a security claim, start with the models and follow its application page. For numerical reproduction, use the verification account. The learning route explains the science; the topic pages own complete statements, hypotheses and proofs.
+
 ## Evidence
 
 - [Related work](references/RELATED_WORK.md): precise attribution and current inspected versions.

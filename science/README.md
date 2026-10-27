@@ -1,6 +1,6 @@
 # Scientific map
 
-[Repository overview](../README.md) · [Models](model.md) · [References](../references/RELATED_WORK.md) · [Verification](../verification/README.md)
+[Repository overview](../README.md) · [Models](model.md) · [Learning guide](../learning/README.md) · [References](../references/RELATED_WORK.md) · [Verification](../verification/README.md)
 
 ## The central distinction
 

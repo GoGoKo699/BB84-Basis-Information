@@ -17,7 +17,7 @@ A minimum-distance estimate replaces every nonzero primal overlap by the largest
 
 ## What is optimal
 
-The two unavoidable strategies are guessing a likely basis and using a basis-independent Breidbart measurement. They impose respectively $`2^{-k}`$ and $`\beta^n`$ lower bounds. Random linear bases achieve their sum on average. Thus
+The two unavoidable strategies are guessing a likely basis and using a basis-independent Breidbart measurement. They impose respectively $`2^{-k}`$ and $`\beta^n`$ lower bounds. Random linear bases have average value at most their sum. Thus
 
 ```math
 -\log_2\omega_{\mathrm{best}}(n,k)

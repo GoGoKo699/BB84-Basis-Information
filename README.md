@@ -62,6 +62,12 @@ The exact independent-basis BB84 value and projector-overlap method are prior wo
 
 [The LLM reading guide](llms.txt) maps questions to the canonical statements and proofs.
 
+## Learn the argument
+
+The [learning guide](learning/README.md) connects **John Watrous, *The Theory of Quantum Information*** to this project's cryptographic questions. The [source bridge](learning/watrous_bridge.md) identifies the relevant sections, translates the notation, and supplies the steps from measurement theory to coded bases.
+
+The [30-milestone map](learning/milestones.md) organizes the background and research narrative. The [worked tutorial](learning/tutorial.md) starts with a single BB84 qubit and a two-qubit basis code, then develops the spectral formula, randomness tradeoff, robustness certificate and application boundaries. The complete statements and proofs remain in [the scientific account](science/README.md).
+
 ## Reproduce the finite checks
 
 From the repository root, install the documented dependency and run:
