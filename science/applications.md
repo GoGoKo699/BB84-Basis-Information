@@ -4,7 +4,7 @@
 
 The exact BB84 cloning theorem has two different encryption consequences. The first is a refinement of conjugate one-time-pad encryption: it has perfect ordinary privacy and an exact bound on simultaneous recovery of a uniformly random message. The second applies the common-mask compiler of Coladangelo, Liu and Xie to obtain one-bit unclonable indistinguishability. Their plaintexts, privacy guarantees and reductions differ, so we specify the two constructions separately.
 
-Throughout, fix a public full-rank binary matrix $`G\in\mathbb F_2^{n\times k}`$ and let $`C=\operatorname{im}G`$. A uniform seed $`U\in\mathbb F_2^k`$ chooses the basis string $`\Theta=GU`$. Write
+Throughout, fix a public full-rank binary matrix $`G\in\mathbb F_2^{n\times k}`$ and let $`C=\mathrm{im}\,G`$. A uniform seed $`U\in\mathbb F_2^k`$ chooses the basis string $`\Theta=GU`$. Write
 
 ```math
 \beta=\cos^2(\pi/8),\qquad
@@ -28,7 +28,7 @@ Here a splitting adversary receives an honestly prepared $`|X^{GU}\rangle`$ for 
 The secret key is $`(U,P)`$, with independent uniform $`U\in\mathbb F_2^k`$ and $`P\in\mathbb F_2^n`$. To encrypt an $`n`$-bit classical message $`m`$, output
 
 ```math
-\operatorname{Enc}_{U,P}(m)=|(m\oplus P)^{GU}\rangle.
+\mathrm{Enc}_{U,P}(m)=|(m\oplus P)^{GU}\rangle.
 ```
 
 Decryption measures the ciphertext in basis $`GU`$ and XORs the resulting string with $`P`$. Correctness is perfect. The quantum operations used by the honest parties are single-qubit preparations, Hadamards and computational-basis measurements. Computing $`GU`$ is a classical matrix multiplication.
@@ -86,7 +86,7 @@ The common-mask reduction and its quartic loss are inherited from CLX. Our subst
 The secret key is now $`(U,R)`$, with independent uniform $`U\in\mathbb F_2^k`$ and $`R\in\mathbb F_2^n`$. To encrypt a classical bit $`b`$, sample fresh uniform local randomness $`X\in\mathbb F_2^n`$ and output
 
 ```math
-\operatorname{Enc}^{\mathrm{bit}}_{U,R}(b)
+\mathrm{Enc}^{\mathrm{bit}}_{U,R}(b)
 =\bigl(|X^{GU}\rangle,\ c=b\oplus R\cdot X\bigr).
 ```
 

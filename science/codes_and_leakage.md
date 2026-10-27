@@ -68,7 +68,7 @@ Suppose $`\Theta`$ is initially uniform on $`\mathbb F_2^n`$ and a specified pub
 
 ```math
 p_{\mathrm{win}}=\omega(\ker A)
-=\beta^nW_{\operatorname{row}(A)}(\kappa).
+=\beta^nW_{\mathrm{row}(A)}(\kappa).
 ```
 
 The attack may depend on $`L`$. In the physical formulation the encoded data remains uniform and independent of $`(\Theta,L)`$.
@@ -85,7 +85,7 @@ W_R(\kappa)\le\sum_{z\in\mathbb F_2^\ell}\kappa^{|z|}
 Thus
 
 ```math
-\max_{\operatorname{rank}A=\ell}p_{\mathrm{win}}=\beta^{n-\ell}.
+\max_{\mathrm{rank}\,A=\ell}p_{\mathrm{win}}=\beta^{n-\ell}.
 ```
 
 Revealing $`\ell`$ individual basis coordinates attains this maximum. This worst-case bound also follows by retaining an information set and applying ordinary BB84 parallel repetition. The new rate conclusion below concerns honestly sampled dense linear spaces, not all maps of a given rank.
@@ -99,7 +99,7 @@ C=\{000,011,101,110\},\qquad R=\{000,111\},
 \qquad \omega(C)=\frac{1+3c^2}{4}=\frac58.
 ```
 
-Both disclosures contain one classical bit. Their operational effects differ because the location of low-weight vectors in the row space differs. For a single parity on $`w`$ coordinates, the exact value is $`\beta^n(1+\kappa^w)`$.
+Both disclosures contain one classical bit. Their operational effects differ because the location of low-weight vectors in the row space differs. For a single parity on $`w`$ coordinates, with $`1\le w\le n`$, the exact value is $`\beta^n(1+\kappa^w)`$.
 
 ## Exact mean of a random code
 
@@ -166,7 +166,7 @@ The random-code mean is at most the sum of these two quantities. A deterministic
 
 ```math
 \max\{2^{-k},\beta^n\}
-\le\inf_{|\operatorname{supp}\mu|\le2^k}\omega(\mu)
+\le\inf_{|\mathrm{supp}\,\mu|\le2^k}\omega(\mu)
 \le\beta^n+2^{-k}.
 ```
 

@@ -9,7 +9,7 @@ Let bases be uniform on a binary linear code $`C`$, with dual $`R`$. The exact c
 For $`S\subseteq[n]`$, the projection $`C|_S`$ is a linear space. A uniform codeword projects uniformly because every fiber has the same size. Its dual is the shortened code
 
 ```math
-R_S=\{r|_S:r\in R,\ \operatorname{supp}r\subseteq S\}.
+R_S=\{r|_S:r\in R,\ \mathrm{supp}\,r\subseteq S\}.
 ```
 
 To verify this identity, a vector on $`S`$ is orthogonal to all projected codewords exactly when its zero extension is orthogonal to $`C`$. Shortening, rather than simply projecting the dual, is the relevant operation.
@@ -63,9 +63,9 @@ Every coefficient is nonnegative. Substitute the projected-game bound and identi
 \begin{aligned}
 \mathbb E[s^{L_J}]
 &\le\sum_{T\subseteq J}s^{h-|T|}[\beta(1-s)]^{|T|}
-\sum_{r\in R_J:\operatorname{supp}r\subseteq T}\kappa^{|r|}\\
+\sum_{r\in R_J:\mathrm{supp}\,r\subseteq T}\kappa^{|r|}\\
 &=\sum_{r\in R_J}\kappa^{|r|}
-\sum_{T:\operatorname{supp}r\subseteq T\subseteq J}
+\sum_{T:\mathrm{supp}\,r\subseteq T\subseteq J}
 s^{h-|T|}[\beta(1-s)]^{|T|}\\
 &=\sum_{r\in R_J}[\kappa\beta(1-s)]^{|r|}
 [s+\beta(1-s)]^{h-|r|}\\
@@ -138,7 +138,7 @@ Let $`Z`$ be a branch label, with retained set $`J_z`$, and suppose that before 
 =\sum_{\theta,z}\mu_C(\theta)
 |\theta,z\rangle\langle\theta,z|\otimes\widetilde\rho^z_{ABD},
 \qquad
-\sum_z\operatorname{Tr}\widetilde\rho^z_{ABD}\le1.
+\sum_z\mathrm{Tr}\,\widetilde\rho^z_{ABD}\le1.
 ```
 
 Every subnormalized branch is independent of $`\Theta`$. Both players may know $`z`$. Apply the normalized theorem to each branch and multiply by its trace. If every accepted branch has $`|J_z|\ge h_0`$ and relative error tolerance at most $`\gamma<q_*`$, then

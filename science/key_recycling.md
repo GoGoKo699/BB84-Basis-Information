@@ -22,21 +22,21 @@ The following substitution also applies to a nonlinear code using the exact spec
 Let
 
 ```math
-\operatorname{MAC}:\mathcal K\times
+\mathrm{MAC}:\mathcal K\times
 (\mathcal M\times\mathbb F_2^n)\longrightarrow\mathcal T
 ```
 
-be a one-time authentication code with substitution error $`\varepsilon_{\mathrm{MAC}}`$. For every fixed classical message $`m`$, the keyed function $`h_m(K,X)=\operatorname{MAC}(K,m\|X)`$ must satisfy the two properties used by FS:
+be a one-time authentication code with substitution error $`\varepsilon_{\mathrm{MAC}}`$. For every fixed classical message $`m`$, the keyed function $`h_m(K,X)=\mathrm{MAC}(K,m\|X)`$ must satisfy the two properties used by FS:
 
 - **Message independence.** With a uniform key, the distribution of $`h_m(K,x)`$ is independent of $`x`$.
 - **Ideal key privacy.** For every state with uniform $`K`$ independent of $`X`$, tag $`T=h_m(K,X)`$, and Markov relation $`K\leftrightarrow XT\leftrightarrow F`$,
 
 ```math
 \Delta(K\mid TF)
-\le\frac12\sqrt{|\mathcal T|\,\operatorname{Guess}(X\mid TF)}.
+\le\frac12\sqrt{|\mathcal T|\,\mathrm{Guess}(X\mid TF)}.
 ```
 
-Here $`\operatorname{Guess}`$ denotes optimal guessing probability with quantum side information, and
+Here $`\mathrm{Guess}`$ denotes optimal guessing probability with quantum side information, and
 
 ```math
 \Delta(K\mid F)
@@ -45,7 +45,7 @@ Here $`\operatorname{Guess}`$ denotes optimal guessing probability with quantum 
 
 FS's suggested OTP-masked universal-hash constructions satisfy these requirements. Ordinary one-time MAC security alone is insufficient for the recycling conclusion.
 
-The honest parties share a MAC key $`K`$ and basis key $`\Theta\in C`$. Alice samples fresh uniform $`X\in\mathbb F_2^n`$, prepares $`|X^\Theta\rangle`$, and sends the classical message $`m`$, the qubits, and $`T=\operatorname{MAC}(K,m\|X)`$. Bob measures the received qubits in basis $`\Theta`$ to get $`X'`$ and verifies the received classical message/tag against $`X'`$. Eve may arbitrarily modify the classical and quantum transmission and retain quantum information.
+The honest parties share a MAC key $`K`$ and basis key $`\Theta\in C`$. Alice samples fresh uniform $`X\in\mathbb F_2^n`$, prepares $`|X^\Theta\rangle`$, and sends the classical message $`m`$, the qubits, and $`T=\mathrm{MAC}(K,m\|X)`$. Bob measures the received qubits in basis $`\Theta`$ to get $`X'`$ and verifies the received classical message/tag against $`X'`$. Eve may arbitrarily modify the classical and quantum transmission and retain quantum information.
 
 If Bob accepts, the parties retain both keys. If he rejects, they retain $`K`$ and replace $`\Theta`$ by fresh shared uniform $`\Theta'\in C`$. This refresh requires the reliable and private randomness resource assumed in FS; it is not obtained for free from the transmitted tag. The execution model includes a common accept/reject outcome and synchronized sequential use of the keys. Eve learns the decision.
 
@@ -61,7 +61,7 @@ The proof through the one-execution estimates first fixes the message $`m`$. For
 
 ## 2. Importing the exact value in the presence of quantum side information
 
-Let $`g=\operatorname{Guess}(\Theta\mid E)`$ and write
+Let $`g=\mathrm{Guess}(\Theta\mid E)`$ and write
 
 ```math
 \rho_{\Theta E}
@@ -69,7 +69,7 @@ Let $`g=\operatorname{Guess}(\Theta\mid E)`$ and write
 \otimes\rho_E^\theta,
 ```
 
-where the $`\rho_E^\theta`$ are subnormalized. The dual state-discrimination program has an optimal positive operator $`Y`$ such that $`Y\succeq\rho_E^\theta`$ for every $`\theta`$ and $`\operatorname{Tr}Y=g`$. Consequently, for $`\sigma_E=Y/g`$,
+where the $`\rho_E^\theta`$ are subnormalized. The dual state-discrimination program has an optimal positive operator $`Y`$ such that $`Y\succeq\rho_E^\theta`$ for every $`\theta`$ and $`\mathrm{Tr}\,Y=g`$. Consequently, for $`\sigma_E=Y/g`$,
 
 ```math
 \rho_{\Theta E}
@@ -93,18 +93,18 @@ Let $`V\in\{0,1\}`$ be Bob's accept/reject bit. Let $`R`$ contain Eve's complete
 After averaging the uniform MAC key, message independence makes the original tag independent of $`X,\Theta,E`$ and the prepared qubits. Averaging uniform $`X`$ makes the quantum ciphertext $`I/2^n`$, independently of $`\Theta,E`$. Data processing therefore gives
 
 ```math
-\operatorname{Guess}(\Theta\mid R)
-\le\operatorname{Guess}(\Theta\mid E)=g.
+\mathrm{Guess}(\Theta\mid R)
+\le\mathrm{Guess}(\Theta\mid E)=g.
 ```
 
 On rejection, $`\Theta'`$ is fresh uniform randomness. On acceptance, it equals $`\Theta`$. Decomposing guessing probability over the public decision gives
 
 ```math
 \begin{aligned}
-\operatorname{Guess}(\Theta'\mid VR)
+\mathrm{Guess}(\Theta'\mid VR)
 &=\Pr[V=0]\frac1{|C|}
- +\Pr[V=1]\operatorname{Guess}(\Theta\mid R,V=1)\\
-&\le\frac1{|C|}+\operatorname{Guess}(\Theta\mid R)\\
+ +\Pr[V=1]\mathrm{Guess}(\Theta\mid R,V=1)\\
+&\le\frac1{|C|}+\mathrm{Guess}(\Theta\mid R)\\
 &\le g+\frac1{|C|}.
 \end{aligned}
 ```
@@ -133,7 +133,7 @@ is produced from $`X,T`$ and key-independent initial systems, without acting dir
 
 ```math
 \Delta(K\mid\widetilde\Theta'\widetilde V R)
-\le\frac12\sqrt{|\mathcal T|\,\operatorname{Guess}
+\le\frac12\sqrt{|\mathcal T|\,\mathrm{Guess}
 (X\mid\widetilde\Theta',Q,R)}.
 ```
 
@@ -141,12 +141,12 @@ In the expression above, $`|\mathcal T|`$ is the tag-space size. Keeping the tag
 
 Set $`B_0=g|C|\omega(C)`$. We bound the guessing probability inside the square root by $`2B_0`$, using its two $`Q`$ branches.
 
-On $`Q=0`$, the refreshed basis is independent of everything else. The subnormalized branch contribution is therefore at most $`\operatorname{Guess}(X\mid R)`$. By data processing, it is at most the probability of guessing $`X`$ from the original ciphertext, original tag and $`E`$, without the basis. At that original input state the tag is independent, so it can be removed. The one-player bound in §2 gives at most $`B_0`$.
+On $`Q=0`$, the refreshed basis is independent of everything else. The subnormalized branch contribution is therefore at most $`\mathrm{Guess}(X\mid R)`$. By data processing, it is at most the probability of guessing $`X`$ from the original ciphertext, original tag and $`E`$, without the basis. At that original input state the tag is independent, so it can be removed. The one-player bound in §2 gives at most $`B_0`$.
 
 On $`Q=1`$, providing the original $`\Theta`$ is at least as informative as providing $`\widetilde\Theta'`$. Indeed, if $`J=1`$ these are identical; if $`J=0`$ the latter is fresh independent randomness, which can be simulated from the former and $`R`$. Thus this branch contributes at most
 
 ```math
-\Pr[Q=1]\operatorname{Guess}(X\mid\Theta,R,Q=1).
+\Pr[Q=1]\mathrm{Guess}(X\mid\Theta,R,Q=1).
 ```
 
 For each basis, choose the measurement on Eve's register that optimizes this conditional guessing probability. It is a valid measurement on that register even when evaluated on the unconditional state. The displayed expression is the probability that Bob's measured $`X'`$ and Eve's answer both equal $`X`$. After averaging out $`K`$, the original tag is an independent channel input. The deferred EPR preparation and Eve's channel therefore fit the preparation map in §2, bounding this contribution by another $`B_0`$.
@@ -167,19 +167,19 @@ The factor $`1/\sqrt2`$ is the product of the $`1/2`$ in ideal key privacy and t
 Together with §3, the one-execution result is
 
 ```math
-\operatorname{Guess}(\Theta'\mid E')\le g+|C|^{-1},
+\mathrm{Guess}(\Theta'\mid E')\le g+|C|^{-1},
 \qquad
 \Delta(K\mid\Theta'E')
 \le2\varepsilon_{\mathrm{MAC}}
 +\frac1{\sqrt2}\sqrt{g|C|\omega(C)|\mathcal T|}.
 ```
 
-For a message $`M`$ selected by a measurement of Eve's initial system, let $`E_1`$ denote her remaining information, retain $`M`$ in that information, and write $`g_m=\operatorname{Guess}(\Theta\mid E_1,M=m)`$. Each conditional state still has an independent uniform MAC key. Apply the fixed-message proof to that branch. Data processing and the classical decomposition of guessing probability give
+For a message $`M`$ selected by a measurement of Eve's initial system, let $`E_1`$ denote her remaining information, retain $`M`$ in that information, and write $`g_m=\mathrm{Guess}(\Theta\mid E_1,M=m)`$. Each conditional state still has an independent uniform MAC key. Apply the fixed-message proof to that branch. Data processing and the classical decomposition of guessing probability give
 
 ```math
 \overline g=\sum_m\Pr[M=m]g_m
-=\operatorname{Guess}(\Theta\mid M E_1)
-\le\operatorname{Guess}(\Theta\mid E).
+=\mathrm{Guess}(\Theta\mid M E_1)
+\le\mathrm{Guess}(\Theta\mid E).
 ```
 
 The basis-key estimates average linearly. For the MAC key, Jensen's inequality gives $`\sum_m\Pr[M=m]\sqrt{g_m}\le\sqrt{\overline g}`$, preserving the displayed square-root bound and every constant. This conditional argument is needed: the per-message hash hypotheses do not assert unconditional tag independence when the message itself is correlated with Eve's information.
