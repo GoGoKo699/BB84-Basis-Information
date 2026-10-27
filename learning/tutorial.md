@@ -590,7 +590,7 @@ For example, for a positive integer $`\lambda`$, choose $`\varepsilon_{\mathrm{M
 
 ```math
 \mathbb E_C\varepsilon_i
-\le\left(2i-1+\sum_{j<i}\sqrt j\right)2^{-\lambda}.
+\le\left(2i-1+\sum_{j=1}^{i-1}\sqrt j\right)2^{-\lambda}.
 ```
 
 This uses about $`13.1322\lambda`$ qubits. The comparison in [the parameter analysis](../science/key_recycling.md#6-concrete-parameter-refinement) uses the earlier minimum-distance choice with a random-linear Gilbert–Varshamov certification, which gives about $`21.2424\lambda`$ qubits. The approximately 38.18% reduction compares those two certification routes. It is not a lower bound on other codes or on all recycling protocols.

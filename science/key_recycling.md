@@ -221,7 +221,7 @@ U_{\mathcal K}\otimes\tau_{j-1,\Theta E}\bigr)+\delta_j.
 \end{aligned}
 ```
 
-Induction bounds this distance by $`\sum_{a\le j}\delta_a`$. Before execution $`i`$, the real state is consequently within $`\sum_{j<i}\delta_j`$ of an input with an independent uniform MAC key. A message substitution in that comparison execution is accepted with probability at most $`\varepsilon_{\mathrm{MAC}}`$. Hence
+Induction bounds this distance by $`\sum_{a\le j}\delta_a`$. Before execution $`i`$, the real state is consequently within $`\sum_{j=1}^{i-1}\delta_j`$ of an input with an independent uniform MAC key. A message substitution in that comparison execution is accepted with probability at most $`\varepsilon_{\mathrm{MAC}}`$. Hence
 
 ```math
 \boxed{
@@ -261,7 +261,7 @@ The fixed-code bound holds for every adversary, including one that knows the pub
 
 ```math
 \mathbb E_C\varepsilon_i
-\le\left(2i-1+\sum_{j<i}\sqrt j\right)2^{-\lambda}.
+\le\left(2i-1+\sum_{j=1}^{i-1}\sqrt j\right)2^{-\lambda}.
 ```
 
 This matches the displayed FS sequential-use guarantee, with the same $`3\lambda`$ fresh basis bits needed after a rejection. It is average security over honestly sampled public setup. A guarantee for most individual fixed codes follows from the weight-spectrum certificate with appropriate slack; it is a different statement from a worst-case guarantee for every public matrix.
