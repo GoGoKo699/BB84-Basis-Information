@@ -1,0 +1,37 @@
+# BB84 Basis Information
+
+> Exact correlated-basis BB84 security, optimal secret basis randomness, uniform subset/noise certificates, and the distinction between classical and quantum basis information.
+
+## Start here
+
+- [Overview](README.md): scientific question, main results, reproducibility and resource boundaries.
+- [Scientific map](science/README.md): connected route and theorem dependencies.
+- [Models](science/model.md): adversary, timing, basis independence, complete-string recovery and agreement predicate.
+
+## Exact statements and proofs
+
+- [Spectral value](science/spectral_value.md): arbitrary correlated choices of two finite-dimensional PVMs; higher-rank principal-vector attainment; biased strong repetition.
+- [Physical BB84 attainment](science/bb84_cloning.md): source replacement, normalized Pauli POVM and direct recovery calculation.
+- [Codes and leakage](science/codes_and_leakage.md): linear/affine formula, syndrome geometry, exact random-code mean, high-probability certificate and optimal basis-seed rate.
+- [Noise and loss](science/noise_and_loss.md): projected-code argument with full basis context, shortened duals, positive moment expansion, relative-entropy exponent and subnormalized branch condition.
+- [Quantum side information](science/quantum_side_information.md): explicit counterexample to the additive expression in Fehr–Salvail Remark 3, with discrimination certificate and positive-distance family.
+
+## Cryptographic interpretation
+
+- [Encryption applications](science/applications.md): distinguish perfectly private full-message search security from the separate one-bit common-mask compiler construction.
+- [Key recycling](science/key_recycling.md): inherited Fehr–Salvail assumptions, exact-value substitution, one-step and sequential bounds, limited quantitative comparison.
+- [Resource interpretation](science/interpretation.md): secret seed versus total key, public setup, quantum operations and scope.
+
+## Evidence
+
+- [Related work](references/RELATED_WORK.md): precise attribution and current inspected versions.
+- [Bibliography](references/references.bib): structured primary-source metadata.
+- [Verification](verification/README.md): commands, finite checks, expected output and their limits.
+
+## Essential distinctions
+
+The spectral theorem assumes a state independent of the sampled basis. Its physical attainment is BB84-specific and uses a uniform encoded full string. The optimal rate 0.228446696836388 bits per qubit counts secret basis randomness, not total encryption key length. A public random code is known to the attacker; averaged setup security and a fixed-code certificate are different guarantees.
+
+The sharp noise statement requires agreement on accepted positions. Loss branches must be independent of the unexposed basis, not merely announced early. The quantum-side-information counterexample concerns adversarial referee preparation and does not break a proved authentication protocol. The full-message conjugate OTP scheme fails chosen-message unclonable indistinguishability; the separate one-bit application imports the Coladangelo–Liu–Xie compiler with its secret mask revealed only after splitting.
+
+Treat the written proofs as authoritative for all-dimension claims. Finite numerical checks do not prove general correctness, efficient implementability or novelty. Do not infer a publication, license, deployment or security model beyond what the files state.
