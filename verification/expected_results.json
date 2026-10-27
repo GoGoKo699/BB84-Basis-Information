@@ -1,0 +1,254 @@
+{
+  "status": "PASS",
+  "interpretation": "Finite numerical checks support, but do not prove, the analytic results.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 20261027,
+  "relative_scale_tolerance": 2e-10,
+  "checks": 36017,
+  "checks_by_section": {
+    "nonuniform Gram, frame, and physical POVM": 1482,
+    "general higher-rank PVMs and quantum player measurements": 649,
+    "all small codes, affine cosets, projections, and MGF coefficients": 33234,
+    "unused basis context and direct noise payoff operators": 115,
+    "constants, Chernoff optimization, and quantum leakage counterexample": 478,
+    "one-bit ordinary privacy and QKR comparison constants": 59
+  },
+  "max_absolute_equality_residual": 2.5201174480571353e-11,
+  "max_positive_inequality_residual": 1.3322676295501878e-15,
+  "physical_examples": [
+    {
+      "n": 1,
+      "value": 0.9123105625617658
+    },
+    {
+      "n": 1,
+      "value": 1.0
+    },
+    {
+      "n": 1,
+      "value": 0.8535533905932737
+    },
+    {
+      "n": 2,
+      "value": 0.7806516443015006
+    },
+    {
+      "n": 2,
+      "value": 0.8307189138830735
+    },
+    {
+      "n": 3,
+      "value": 0.6588289650791849
+    }
+  ],
+  "higher_rank_examples": [
+    {
+      "referee_dimension": 4,
+      "n": 2,
+      "c": 0.9336026647059934,
+      "value": 0.9413041726994062
+    },
+    {
+      "referee_dimension": 3,
+      "n": 1,
+      "c": 0.9403601782226408,
+      "value": 0.9746018404282915
+    }
+  ],
+  "enumeration": {
+    "maximum_length": 4,
+    "linear_codes": 90,
+    "affine_cosets": 372,
+    "affine_projections": 5370
+  },
+  "random_code_means": [
+    {
+      "n": 1,
+      "k": 0,
+      "codes": 1,
+      "mean": 1.0,
+      "formula": 1.0
+    },
+    {
+      "n": 1,
+      "k": 1,
+      "codes": 1,
+      "mean": 0.853553390593274,
+      "formula": 0.8535533905932737
+    },
+    {
+      "n": 2,
+      "k": 0,
+      "codes": 1,
+      "mean": 1.0,
+      "formula": 1.0
+    },
+    {
+      "n": 2,
+      "k": 1,
+      "codes": 3,
+      "mean": 0.8190355937288493,
+      "formula": 0.8190355937288492
+    },
+    {
+      "n": 2,
+      "k": 2,
+      "codes": 1,
+      "mean": 0.7285533905932737,
+      "formula": 0.7285533905932737
+    },
+    {
+      "n": 3,
+      "k": 0,
+      "codes": 1,
+      "mean": 1.0,
+      "formula": 1.0
+    },
+    {
+      "n": 3,
+      "k": 1,
+      "codes": 7,
+      "mean": 0.7839195524394942,
+      "formula": 0.783919552439494
+    },
+    {
+      "n": 3,
+      "k": 2,
+      "codes": 7,
+      "mean": 0.675879328659241,
+      "formula": 0.6758793286592409
+    },
+    {
+      "n": 3,
+      "k": 3,
+      "codes": 1,
+      "mean": 0.6218592167691142,
+      "formula": 0.6218592167691145
+    },
+    {
+      "n": 4,
+      "k": 0,
+      "codes": 1,
+      "mean": 1.0,
+      "formula": 1.0
+    },
+    {
+      "n": 4,
+      "k": 1,
+      "codes": 15,
+      "mean": 0.749754689570643,
+      "formula": 0.7497546895706428
+    },
+    {
+      "n": 4,
+      "k": 2,
+      "codes": 35,
+      "mean": 0.6246320343559644,
+      "formula": 0.6246320343559641
+    },
+    {
+      "n": 4,
+      "k": 3,
+      "codes": 15,
+      "mean": 0.5620707067486249,
+      "formula": 0.5620707067486249
+    },
+    {
+      "n": 4,
+      "k": 4,
+      "codes": 1,
+      "mean": 0.5307900429449554,
+      "formula": 0.5307900429449552
+    }
+  ],
+  "noise_bound_example": {
+    "code": [
+      "00",
+      "11"
+    ],
+    "s": 0.5,
+    "best_state_with_constant_answers": 0.8607501170411728,
+    "moment_bound": 0.8642766952966368
+  },
+  "constants": {
+    "beta": 0.8535533905932737,
+    "q_star": 0.14644660940672627,
+    "kappa": 0.17157287525380996,
+    "alpha": 0.22844669683638807,
+    "unchanged_exponent_syndrome_rate": 0.7715533031636119,
+    "binary_entropy_0.01": 0.08079313589591118
+  },
+  "quantum_leakage_counterexample": {
+    "full_cube_n": 8,
+    "actual_win": 1,
+    "proposed_upper_bound": 0.9888448508760549,
+    "positive_rate_existence_n": 400,
+    "positive_rate_dimension": 360,
+    "minimum_distance": 4,
+    "expected_bad_words": 9.701579983811826e-06,
+    "positive_rate_proposed_bound": 0.25000000000000033
+  },
+  "high_probability_example": {
+    "n": 64,
+    "k": 27,
+    "t": 6,
+    "failure_bound": 0.012011260122128173,
+    "certificate_epsilon": 0.015625
+  },
+  "application_formula_checks": {
+    "ordinary_privacy_examples": [
+      {
+        "n": 2,
+        "code": [
+          0
+        ],
+        "trace_distance": 0.25,
+        "ordinary_guess_probability": 0.625
+      },
+      {
+        "n": 2,
+        "code": [
+          0,
+          1
+        ],
+        "trace_distance": 0.25,
+        "ordinary_guess_probability": 0.625
+      },
+      {
+        "n": 2,
+        "code": [
+          0,
+          2
+        ],
+        "trace_distance": 0.25,
+        "ordinary_guess_probability": 0.625
+      },
+      {
+        "n": 2,
+        "code": [
+          0,
+          3
+        ],
+        "trace_distance": 0.25,
+        "ordinary_guess_probability": 0.625
+      },
+      {
+        "n": 2,
+        "code": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "trace_distance": 0.24999999999999992,
+        "ordinary_guess_probability": 0.625
+      }
+    ],
+    "gv_rate": 0.14122698699616526,
+    "old_qubits_per_security_bit": 21.242398948024423,
+    "new_qubits_per_security_bit": 13.132166240725201,
+    "relative_reduction": 0.3817945763632071,
+    "limitation": "Only density-operator identities and constants are checked here; the compiler and recycling proofs are not numerically verified."
+  }
+}
